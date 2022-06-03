@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  playground:
+    image: playground
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    command: npm run dev
+    volumes:
+      - .:/node-playground
